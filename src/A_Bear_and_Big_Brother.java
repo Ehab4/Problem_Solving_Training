@@ -8,6 +8,7 @@ public class A_Bear_and_Big_Brother {
 
         int weightOfLimak = scan.nextInt();
         int weightOfBob = scan.nextInt();
+
         int yearsCount = 0;
         for(int i = 1;weightOfBob >= weightOfLimak;i++){
             weightOfBob *= 2;
