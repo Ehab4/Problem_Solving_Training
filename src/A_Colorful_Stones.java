@@ -19,5 +19,5 @@ public class A_Colorful_Stones {
 
         System.out.print(count);
     }
-    
+
 }
