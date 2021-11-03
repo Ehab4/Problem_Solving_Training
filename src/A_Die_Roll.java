@@ -10,7 +10,7 @@ public class A_Die_Roll {
         int y = scan.nextInt();
         int w = scan.nextInt();
         int numberOfProbability = 6;
-        Main m = new Main();
+        A_Die_Roll m = new A_Die_Roll();
         int max = Math.max(y,w);
         HashMap<Integer, Integer> primeNumbers = m.primeFraction(numberOfProbability - max + 1);
 //        for (Map.Entry<Integer, Integer> entry : primeNumbers.entrySet()) {
