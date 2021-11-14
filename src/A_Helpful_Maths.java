@@ -9,32 +9,53 @@ public class A_Helpful_Maths {
         String s = scan.next();
 
         String arr[] = s.split("\\+");
-        int numbers[] = new int [arr.length];
-        for(int i = 0;i<numbers.length;i++){
-            numbers[i] = Integer.parseInt(arr[i]);
-        }
 
-        for (int i = 0; i < numbers.length; i++){
-            for (int j = 0; j < numbers.length - 1; j++){
-                if(numbers[j] > numbers[j+1]){
-                    int temp = numbers[j];
-                    numbers[j] = numbers[j+1];
-                    numbers[j+1] = temp;
-                }
+        int n1 = 0;
+        int n2 = 0;
+        int n3 = 0;
+        int start = 0;
+        StringBuffer str = new StringBuffer();
+        for(int i = 0; i < arr.length; i++){
+            int num = Integer.parseInt(arr[i]);
+            if(num == 1){
+                n1++;
+                start = num;
+            }
+            else if(num == 2){
+                n2++;
+                start = num;
+            }
+            else{
+                n3++;
+                start = num;
             }
         }
+        int len = n1+n2+n3;
+        for (int i = 0; i < len; i++) {
+            if (len > 1) {
+                if (n1 != 0) {
+                    str.append(1);
+                    n1--;
+                }
+                else if (n2 != 0) {
+                    str.append(2);
+                    n2--;
+                }
+                else if (n3 != 0) {
+                    str.append(3);
+                    n3--;
+                }
 
-        for (int i = 0; i < numbers.length; i++){
-            if(numbers.length > 1) {
-                System.out.print(numbers[i]);
-                if(i != numbers.length-1) {
-                    System.out.print("+");
+                if (i != arr.length - 1) {
+                    str.append("+");
                 }
             }
             else{
-                System.out.print(numbers[i]);
+                str.append(start);
             }
         }
+
+        System.out.println(str);
     }
 
 }
