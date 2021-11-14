@@ -30,4 +30,5 @@ public class A_Free_Ice_Cream {
         System.out.print(sum + " " + count);
 
     }
+
 }
